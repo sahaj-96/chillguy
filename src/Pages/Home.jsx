@@ -6,7 +6,7 @@ const Home = () => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/message").then((response) => {
+    axios.get("/api/message").then((response) => {
       setMessage(response.data.message);
     });
   }, []);
